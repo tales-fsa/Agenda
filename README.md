@@ -1,3 +1,3 @@
 ## Agenda
 
-Agenda simples com dados estáticos criaa em html.
+Agenda simples com dados estáticos criado em html.
