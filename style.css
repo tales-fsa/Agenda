@@ -1,65 +1,77 @@
-.container{
-    margin: auto;
-    width: 100%;
+.container {
+  margin: auto;
+  width: 90%;
+  padding: 5px;
+  overflow: auto;
 }
 
-.tabela{
-    max-width: 100%;
-    width: 100%;
-    margin-bottom: 20px;
-    border-collapse: collapse;
-    border-spacing: 0;
+.tabela {
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-.tabela td, .tabela th{
-    vertical-align: middle;
-    border-top: 1px solid #ddd;
+.tabela td,
+.tabela th {
+  vertical-align: middle;
+  border-top: 1px solid #ddd;
 }
 
-.tabela thead th{
-    background-color: grey;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 7px;
+.tabela thead th {
+  background-color: grey;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 7px;
 }
 
-.tabela tbody td{
-    padding: 8px;
+.tabela tbody td {
+  padding: 8px;
 }
 
-.tabela .small{
-    width: 5%;
-    text-align: left;
+.tabela .small {
+  width: 5%;
+  text-align: left;
 }
 
 .tabela .large {
-    width: 68%;
-    text-align: left;
+  width: 68%;
+  text-align: left;
 }
 
 .tabela .medium {
-    text-align: left;
+  text-align: left;
 }
 
-.tabela tbody tr:nth-child(2n){
-    background-color: #ccc;
+.tabela tbody tr:nth-child(2n) {
+  background-color: #ccc;
 }
 
-@media (max-width: 480px){
-    .tabela thead{
-        display: none;
-    }
+@media (min-width: 481px) {
+  .tabela .large {
+    width: 60%;
+  }
+}
 
-    .tabela tr{
-        border-bottom: 1px solid #ddd;
-    }
+@media (max-width: 480px) {
+  .tabela thead {
+    display: none;
+  }
 
-    .tabela td{
-        border: 0;
-    }
+  .tabela tr {
+    border-bottom: 1px solid #ddd;
+  }
 
-    .tabela td:not(:first-child){
-        display: block;
-    }
+  .tabela td {
+    border: 0;
+  }
 
+  .tabela td:not(:first-child) {
+    display: block;
+  }
+
+  .tabela tbody tr:nth-child(2n) {
+    background-color: transparent;
+  }
 }
