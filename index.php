@@ -59,6 +59,7 @@
 </html>
 <?php
   } else {
+    /** Se nao encontrar o arquivo exibir a mensagem de não encontardo o arquivo */
     echo 'Arquivo não encontrado';
   }  
 ?> 
