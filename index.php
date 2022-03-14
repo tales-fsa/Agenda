@@ -1,8 +1,14 @@
 <?php
+  /*
+    Verificar a existência do arquivo
+  **/
   if (file_exists('Arquivo.txt')){
+    /** Abrir o arquivo */
     $arquivo = 'Arquivo.txt';
+    /** abre somente para leitura colocando o ponteiro no inicio do aqrquivo */
     $abrir = fopen($arquivo, 'r');
-?>        
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -24,14 +30,26 @@
           </tr>
         </thead>
         <tbody>
-          <?php while (!feof($abrir)) { ?>
+          <?php 
+            /*
+             Looping para leitura dos dados no arquivo
+            **/
+            while (!feof($abrir)) { 
+          ?>
             <tr>
-              <?php $nome = explode(',',fgets($abrir)); ?>
+              <?php
+                /*
+                  Colocar em um array os itens separados por uma virgula 
+                **/ 
+                $nome = explode(',',fgets($abrir)); 
+              ?>
+              <!-- imprimir os dados da array nas células -->
               <td><?php echo $nome[0]?></td>
               <td><?php echo $nome[1]?></td>
               <td><?php echo $nome[2]?></td>
             </tr>
           <?php } 
+            /* Fechar o ponteiro de arquivo aberto **/          
             fclose($abrir);
           ?>
         </tbody>
